@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Raveal.js</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+    <style>
+      body {
+        background-color: #eee;
+        color: #999;
+        font-family: 'Roboto', Arial, sans-serif;
+        font-weight: 300;
+        margin: 0;
+      }
+      a {
+        color: #e81d62;
+        text-decoration: none;
+      }
+      #raveal, #bg {
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 200px;
+        height: 200px;
+        margin-top: -120px;
+        margin-left: -100px;
+        border-radius: 3px;
+        text-align: center;
+        line-height: 200px;
+        font-size: 24px;
+      }
+      #bg {
+        background-color: #fff;
+        z-index: 0;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+      }
+      #raveal {
+        color: #fff;
+        background-color: #e81d62;
+        z-index: 1;
+        visibility: hidden;
+        pointer-events: none;
+      }
+      #cred {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: 50%;
+        margin-top: 120px;
+        font-size: 13px;
+        line-height: 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="raveal">Raveal.js</div>
+    <div id="bg">Click me</div>
+    <p id="cred">
+      An experiment by <a href="http://evanyou.me">Evan You</a>
+      <br>
+      Fork on <a href="https://github.com/yyx990803/raveal">GitHub</a>
+    </p>
+    <script src="raveal.js"></script>
+    <script>
+      var rad = new Raveal('#raveal', {
+        closed: true
+      })
+      rad.el.style.visibility = 'visible'
+      rad.el.addEventListener('click', function (e) {
+        rad.close(e)
+      })
+      document.getElementById('bg').addEventListener('click', function (e) {
+        rad.open(e)
+      })
+    </script>
+  </body>
+</html>

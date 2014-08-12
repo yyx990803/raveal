@@ -1,0 +1,22 @@
+{
+  "name": "raveal",
+  "version": "0.0.1",
+  "description": "Radially reveal an element",
+  "main": "raveal.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yyx990803/raveal.git"
+  },
+  "keywords": [
+    "browser",
+    "radial",
+    "reveal",
+    "clip"
+  ],
+  "author": "Evan You",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yyx990803/raveal/issues"
+  },
+  "homepage": "https://github.com/yyx990803/raveal"
+}
