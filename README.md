@@ -8,9 +8,13 @@ CSS `clip-path` property is pretty awesome, but for some reason `clip-path: circ
 
 Raveal.js wraps up these hacks into an easier to use interface.
 
+## Compatibility
+
+Chrome / Firefox / Safari. To my knowledge IE doesn't support non-rectangular shapes for clipPaths when used on non-SVG elements, but feel free to test and contribute a fix.
+
 ## Usage
 
-### `new Raveal(element | selector [, options])`
+#### `new Raveal(element | selector [, options])`
 
 ```js
 var rad = new Raveal('#rad', {
@@ -22,16 +26,20 @@ var rad = new Raveal('#rad', {
 })
 ```
 
-### `rad.open()` or `rad.open(x, y)` or `rad.open(event)`
+#### `rad.open()` or `rad.open(x, y)` or `rad.open(event)`
 
 Reveal the element at given position (relative to the element's bounding box's top-left corner). If no position is given the previous position will be used.
 
 You can also pass in a mouse/touch event and Raveal.js will resolve browser differences automatically for you. (See demo source in `index.html`)
 
-### `rad.close()` or `rad.close(x, y)` or `rad.close(event)`
+#### `rad.close()` or `rad.close(x, y)` or `rad.close(event)`
 
 Close the element.
 
-### `rad.toggle()` or `rad.toggle(x, y)` or `rad.toggle(event)`
+#### `rad.toggle()` or `rad.toggle(x, y)` or `rad.toggle(event)`
 
 Toggle the element.
+
+## License
+
+MIT

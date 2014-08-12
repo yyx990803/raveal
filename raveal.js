@@ -16,12 +16,22 @@
   document.body.appendChild(holder)
 
   /**
-   * Variables ---------------------------------------------
+   * Compatibility -----------------------------------------
    */
 
-  // Firefox & Chrome handles the position of clipPaths
-  // differently: Chrome treats it relative to the 
+  // Firefox & Webkit handles the position of clipPaths
+  // differently. In webkit it is relative to client
+  // viewport while in Firefox it is relative to the clipped
+  // element.
   var isFirefox = navigator.userAgent.indexOf('Firefox') > 0
+  var rAF =
+    window.webkitRequestAnimationFrame ||
+    window.requestAnimationFrame ||
+    function (fn) { setTimeout(fn, 16) }
+
+  /**
+   * Variables ---------------------------------------------
+   */
 
   // Uid to keep track of defs
   var uid = 0
@@ -94,7 +104,7 @@
         self.state === OPENING ||
         self.state === CLOSING
       ) {
-        requestAnimationFrame(loop)
+        rAF(loop)
       }
       self.update()
     }

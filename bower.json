@@ -1,6 +1,6 @@
 {
   "name": "raveal",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Radially reveal an element",
   "main": "raveal.js",
   "ignore": [
