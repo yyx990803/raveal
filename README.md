@@ -14,6 +14,8 @@ Chrome / Firefox / Safari. To my knowledge IE doesn't support non-rectangular sh
 
 ## Usage
 
+Install via Bower, Component or NPM, or include with a script tag.
+
 #### `new Raveal(element | selector [, options])`
 
 ```js

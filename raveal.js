@@ -13,7 +13,7 @@
       '<defs></defs>' +
     '</svg>'
   var defs = holder.querySelector('defs')
-  document.body.appendChild(holder)
+  var isHolderAppended = false
 
   /**
    * Compatibility -----------------------------------------
@@ -58,6 +58,11 @@
    */
 
   function Raveal (e, opts) {
+
+    if (!isHolderAppended) {
+      isHolderAppended = true
+      document.body.appendChild(holder)
+    }
 
     opts = opts || {}
 
