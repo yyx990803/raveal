@@ -25,8 +25,8 @@
   // element.
   var isFirefox = navigator.userAgent.indexOf('Firefox') > 0
   var rAF =
-    window.webkitRequestAnimationFrame ||
     window.requestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
     function (fn) { setTimeout(fn, 16) }
 
   /**
